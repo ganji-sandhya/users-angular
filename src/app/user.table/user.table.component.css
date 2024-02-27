@@ -1,0 +1,39 @@
+.profile-image {
+    border-radius: 50%;
+    width: 1.5em;
+    height: auto;
+    padding-right: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.name-column {
+    display: flex;
+    align-items: center;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    th, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    th {
+        text-align: center;
+    }
+
+    td {
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+}

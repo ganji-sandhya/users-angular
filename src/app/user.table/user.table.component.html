@@ -1,0 +1,27 @@
+<!-- app.component.html -->
+<table>
+    <thead>
+
+        <tr>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Phone number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td class="name-column">
+                <img *ngIf="user.profileImage" [src]="parseJson(user.profileImage)?.data" [alt]="user.name" class="profile-image" /> <span>{{ user.name }}</span>
+            </td>
+             <td>
+              <span>{{ user.email }}</span>  
+             </td>
+             <td>
+                <span>{{ user.phone }}</span>  
+             </td>
+        </tr>
+    </tbody>
+    
+</table>
+
+  

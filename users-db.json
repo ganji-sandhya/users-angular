@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Sandhya",
+      "email": "sandhya@gmail.com",
+      "phone": "0899498428",
+      "profileImage": ""
+    },
+    {
+      "id": "2",
+      "name": "Ram",
+      "email": "ram@gmail.com",
+      "phone": "0899498428",
+      "profileImage": ""
+    },
+    {
+      "id": "3",
+      "name": "Sam",
+      "email": "sam@gmail.com",
+      "phone": "0899498428",
+      "profileImage": ""
+    },
+    {
+      "id": "4",
+      "name": "Paul",
+      "email": "paul@gmail.com",
+      "phone": "0899498428",
+      "profileImage": ""
+    }
+  ]
+}

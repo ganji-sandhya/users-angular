@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Register</h2>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" method="post">
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="user.name" required #name="ngModel" />
+        <div *ngIf="name.invalid && (name.dirty || name.touched)">
+            <div class="error"  *ngIf="name.errors?.['required']">Name is required.</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"  
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" [(ngModel)]="user.email" required #email="ngModel" />
+        <div *ngIf="email.invalid && (email.dirty || email.touched)">
+            <div class="error"  *ngIf="email.errors?.['required']">E-mail is required.</div>
+            <div class="error"  *ngIf="email.errors?.['pattern']">Invalid E-mail format.</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="phone" name="phone" [(ngModel)]="user.phone"  placeholder="0123456789" pattern="[0-9]{10}" required #phone="ngModel" />
+		<small>Format: 0123456789</small><br>
+        <div *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+            <div class="error"  *ngIf="phone.errors?.['required']">Phone number is required.</div>
+            <div class="error"  *ngIf="phone.errors?.['pattern']">Invalid Phone number.</div>
+          </div>
+      </div>
+
+	  <div class="form-group">
+        <label for="profile_image">Profile Image:</label>
+        <input type="file" id="profile_image" (change)="handleFileInput($event)"  name="Profile Image" accept="image/*" />
+      </div>
+      <button type="submit">Submit</button>
+
+    </form>
+  </div>
